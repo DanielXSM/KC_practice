@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+spring:
+  mvc:
+    view:
+      suffix: .html
+      prefix: /templates
+  datasource:
+    url: jdbc:mysql://offline-tech.ikunchi.com:30037/zdp_tms?characterEncoding=UTF-8&useSSL=false
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: eGaTB0mSfkL2AIRl
+  redis:
+    host: iac-redis-dev-tech.ikunchi.com
+    port: 30038
+    database: 0
+mybatis-plus:
+  mapper-locations: classpath:/xml/*Mapper.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
